@@ -1,4 +1,4 @@
-package mx.mobileuser.modelo;
+package mx.mobileuser;
 
 import android.os.Bundle;
 import android.util.Log;

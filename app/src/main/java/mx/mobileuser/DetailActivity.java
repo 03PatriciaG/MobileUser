@@ -1,4 +1,4 @@
-package mx.mobileuser.modelo;
+package mx.mobileuser;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -35,7 +35,8 @@ public class DetailActivity extends AppCompatActivity {
 
         phone = extras.getString("phone") != "" ? extras.getString("phone") : "Sin numero";
         img = extras.getString("img");
-        direction = extras.getString("direction") != "" ? extras.getString("direction") : "Sin Direccion";
+        direction = extras.getString("direction") != "" ? extras.getString("direction")
+                    : "Sin Direccion";
 
         Glide.with(this).load(img)
                 .placeholder(R.drawable.ic_launcher_background)

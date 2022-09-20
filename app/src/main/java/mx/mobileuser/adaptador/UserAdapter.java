@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import mx.mobileuser.modelo.DetailActivity;
+import mx.mobileuser.DetailActivity;
 import mx.mobileuser.R;
 import mx.mobileuser.modelo.Result;
 
@@ -45,9 +45,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UsersHolder> {
                 + results.get(position).getLocation().getStreet().getNumber();
 
         holder._email.setText(results.get(position).getEmail()) ;
-        holder._name.setText(results.get(position).getName().getFirst() + " " + results.get(position).getName().getLast());
+        holder._name.setText(results.get(position).getName().getFirst() + " " + results.get(position)
+                     .getName().getLast());
         holder._genre.setText(results.get(position).getGender());
-        Glide.with(_context).load(results.get(position).getPicture().getThumbnail())
+        Glide.with(_context).load(results.get(position).getPicture().getLarge()).fitCenter()
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(R.drawable.ic_launcher_foreground)
                 .into(holder._user);
