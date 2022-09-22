@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MobileUser"
         tools:targetApi="31">
         <activity
-            android:label="Detail"
+            android:label="Detalles"
             android:name=".DetailActivity"
             android:exported="false">
             <meta-data

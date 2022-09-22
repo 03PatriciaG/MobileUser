@@ -3,8 +3,10 @@ package mx.mobileuser;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -19,6 +21,7 @@ public class DetailActivity extends AppCompatActivity {
     private String phone;
     private String img;
     private String direction;
+    Button btnRegreso;
 
     private ImageView imgUser;
     private TextView phoneUser;
@@ -33,6 +36,13 @@ public class DetailActivity extends AppCompatActivity {
         directionUser = findViewById(R.id.txtDirectionDetail);
         phoneUser = findViewById(R.id.txtPhoneDetail);
         imgUser = findViewById(R.id.imgUserDetail);
+        btnRegreso = findViewById(R.id.btnRegreso);
+        btnRegreso.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                onBackPressed();
+            }
+        });
 
         Bundle extras = getIntent().getExtras();
 
@@ -58,4 +68,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onBackPressed();
         this.finish();
     }
+
+
+
 }
