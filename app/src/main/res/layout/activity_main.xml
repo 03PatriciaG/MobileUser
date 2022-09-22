@@ -3,8 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="10"
+        android:text="Filtro de Búsqueda"
+        android:textAlignment="center"
+        android:textColor="#FBFAFA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/rdgFilter"
+        app:layout_constraintTop_toTopOf="@+id/rdgFilter" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -18,33 +34,39 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+
     <RadioGroup
         android:id="@+id/rdgFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
         android:orientation="horizontal"
         android:padding="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toTopOf="@id/textView4"
+        tools:ignore="MissingConstraints">
 
         <RadioButton
             android:id="@+id/rbFemale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Mujer" />
+
 
         <RadioButton
             android:id="@+id/rbMale"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Hombre" />
 
         <RadioButton
             android:id="@+id/rbOutFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Limpiar"
+            android:text="Limpiar Filtro"
             android:visibility="gone" />
     </RadioGroup>
 

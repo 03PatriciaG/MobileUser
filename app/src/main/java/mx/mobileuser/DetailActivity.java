@@ -1,11 +1,15 @@
 package mx.mobileuser;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import mx.mobileuser.R;
@@ -24,6 +28,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
 
         directionUser = findViewById(R.id.txtDirectionDetail);
         phoneUser = findViewById(R.id.txtPhoneDetail);
